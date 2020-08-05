@@ -21,7 +21,7 @@ Both PropertyGuru and 99co were smart by leaving out crucial information on the 
 ### My Findings
 Both PropertyGuru and 99co were priced fairly reasonably for most units with an average overstatement of the price by $30,000. This makes sense as they would require some room for negotiation with the buyer as a part of any sales tactic - to create the illusion of successful negotiation. However, I also found many units that were severely mispriced and thought that it'd be interesting to share them with you. <br>
 
-<b>[Link](mispriced.csv) to CSV containing mispriced units</b> <br><br>
+<b>[Link](mispriced hdbs.csv) to CSV containing mispriced units</b> <br><br>
 At this juncture, I would like to highlight that the scraped data from PropertyGuru and 99co is highly susceptible to survivorship bias - the reason being that great units that are priced well will sell quickly and tend to not linger on the platform and thus the scraped data will not reflect such units. Hence I would take the overstatement of $30,000 with a pinch of salt.
 
 # Data Summary
