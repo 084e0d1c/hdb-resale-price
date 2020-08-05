@@ -21,7 +21,8 @@ Both PropertyGuru and 99co were smart by leaving out crucial information on the 
 ### My Findings
 Both PropertyGuru and 99co were priced fairly reasonably for most units with an average overstatement of the price by $30,000. This makes sense as they would require some room for negotiation with the buyer as a part of any sales tactic - to create the illusion of successful negotiation. However, I also found many units that were severely mispriced and thought that it'd be interesting to share them with you. <br>
 
-<b>[Link](mispriced hdbs.csv) to CSV containing mispriced units</b> <br><br>
+[Link](mispriced_hdbs.csv) to CSV containing mispriced units <br><br>
+
 At this juncture, I would like to highlight that the scraped data from PropertyGuru and 99co is highly susceptible to survivorship bias - the reason being that great units that are priced well will sell quickly and tend to not linger on the platform and thus the scraped data will not reflect such units. Hence I would take the overstatement of $30,000 with a pinch of salt.
 
 # Data Summary
@@ -53,7 +54,13 @@ For instance:
 3. Quality of neighbours
 4. Remaining HDB Racial Quota
 
-All of which will impact prices directly and cause a shift! But given with what I've built up, I'm pretty pleased about it and confident that it will help me to at least conduct a sanity check on prices quoted to me in the future. I hoped that you've enjoyed this mini-write up and project. If you would like to check out my other projects, you can check out my [profile](https://github.com/brandontjd?tab=repositories). Till the next one! 
+All of which will impact prices directly and cause a shift! But given with what I've built up, I'm pretty pleased about it and confident that it will help me to at least conduct a sanity check on prices quoted to me in the future. I hoped that you've enjoyed this mini-write up and project. If you would like to see my other projects, you can check out my [profile](https://github.com/brandontjd?tab=repositories). Till the next one! 
+
+# Full workings
+1. [Exploring the data & building the model](hdb_resale.ipynb)
+2. [Mapping scrapped data to model inputs](mapping_guru_99coo.ipynb)
+3. [Making predictions on scraped data](main.ipynb)
+4. [Geocoding script](geocoding.py)
 
 ## Disclaimer
 All views and findings presented in my code or repository are my own and do not represent the opinions of any entity whatsoever with which I have been, am now, or will be affiliated. All material provided are for general information purposes only and do not constitute accounting, legal, tax, or other professional advice. Visitors should not act upon the content or information found here without first seeking appropriate advice from an accountant, financial planner, lawyer or other professional. Usage of any material contained within this repository constitutes an explicit understanding and acceptance of the terms of this disclaimer. 
