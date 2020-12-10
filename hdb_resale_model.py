@@ -60,7 +60,7 @@ class data_transformer():
         return self
 
     def add_buildings(self,df):
-        buildings = pd.read_json('singapore-postal-codes-master/buildings.json')
+        buildings = pd.read_json('./data_files/buildings.json')
         buildings.BUILDING = buildings.BUILDING.str.lower()
         buildings.drop_duplicates('BUILDING',inplace=True)
         places = {'primary_school':'primary school',
@@ -102,7 +102,7 @@ class data_transformer():
         df['storey'] = df['storey_range'].apply(get_num)
         
         if self.geocode:
-            geocode = pd.read_csv('hdb resale geocoded.csv')
+            geocode = pd.read_csv('./data_files/hdb resale geocoded.csv')
             geocode = geocode[['Address','LAT','LON']]
             df = pd.merge(df,geocode,how='left',on='Address')
 
@@ -286,10 +286,10 @@ class model_stacker(resale_price_model):
             self.model = args[0]
 
     def load_models(self):
-        self.clustering = joblib.load('clustering_guru_price_model.pkl')
-        self.random_forest = joblib.load('random_forest_guru_price_model.pkl')
-        self.xgboost = joblib.load('xgboost_guru_price_model.pkl')
-        self.stacker = joblib.load('stacker_guru_price_model.pkl')
+        self.clustering = joblib.load('./pickles/clustering_guru_price_model.pkl')
+        self.random_forest = joblib.load('./pickles/random_forest_guru_price_model.pkl')
+        self.xgboost = joblib.load('./pickles/xgboost_guru_price_model.pkl')
+        self.stacker = joblib.load('./pickles/stacker_guru_price_model.pkl')
         print('Models loaded successfully.')
         return self
     

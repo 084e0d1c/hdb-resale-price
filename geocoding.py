@@ -13,7 +13,7 @@ def geo_code(address):
     return lat,lon 
 
 df = pd.read_csv('hdb resale.csv')
-df['Address'] = df['block'] + ' ' + df['street_name']']
+df['Address'] = df['block'] + ' ' + df['street_name']
 lat_list = []
 lon_list = []
 end = len(df['Address'])
