@@ -2,7 +2,7 @@
 During the summer, I wanted to plan my finances accurately for the future. This meant that I had to begin saving for my future home and I was evaluating between opting for a BTO (Build-To-Order) and Resale flat. Given the selection availability and the speed at which a couple could get the home, I was leaning towards purchasing a resale flat. With this, I was wondering if there was an accurate way that I could project what my future home would cost. This led me to a whole new project to build a machine learning model to enable the price discovery process for me, to evaluate if the seller was over/undercharging me. 
 
 ### New Update from Dec 2020
-I've made an interactive web app using streamlit and the deployment will take place soon. Stay tuned for it! 
+I've made an interactive web app using streamlit! You can interact and enjoy a simple exploration [here]( https://share.streamlit.io/brandontjd/hdb-resale-price/model_demo.py)
 
 ### The Starting Steps
 I decided to utilise past resale flat sales data provided by the Singapore government to train my model. This was relatively straight forward (or so I thought), with some simple data preprocessing (standardisation, cleaning, etc) and feature engineering. When considering what features were important, I browsed the internet and noted that the proximity of a housing unit to certain key amenities such as MRTs or Shopping Malls played a crucial role as well. As a result, I ended up building a geocoding pipeline using OneMapAPI, scraping the geocodes of certain key proximities and calculating distances (with the Haversine formula - for the earth was round, not flat), for each housing unit. After doing so, I successfully built up my model and analysed the importance of features.
