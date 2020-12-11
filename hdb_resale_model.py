@@ -286,23 +286,25 @@ class model_stacker(resale_price_model):
             self.model = args[0]
 
     def load_models(self):
-        self.clustering = joblib.load('./pickles/clustering_guru_price_model.pkl')
-        self.random_forest = joblib.load('./pickles/random_forest_guru_price_model.pkl')
+        # self.clustering = joblib.load('./pickles/clustering_guru_price_model.pkl')
+        # self.random_forest = joblib.load('./pickles/random_forest_guru_price_model.pkl')
         self.xgboost = joblib.load('./pickles/xgboost_guru_price_model.pkl')
-        self.stacker = joblib.load('./pickles/stacker_guru_price_model.pkl')
+        # self.stacker = joblib.load('./pickles/stacker_guru_price_model.pkl')
         print('Models loaded successfully.')
         return self
     
     def predict(self,pred_input):
-        random_forest_pred = self.random_forest.predict(pred_input)
-        xgboost_pred = self.xgboost.predict(pred_input)
-        clustering_pred = self.clustering.predict(pred_input)
+        # random_forest_pred = self.random_forest.predict(pred_input)
+        # xgboost_pred = self.xgboost.predict(pred_input)
+        # clustering_pred = self.clustering.predict(pred_input)
 
-        pred_input = pd.DataFrame({'Random_Forest':random_forest_pred,
-                            'XGBoost':xgboost_pred,
-                            'Clustering':clustering_pred})
-        m = self.stacker
-        return m.predict(pred_input)
+        # pred_input = pd.DataFrame({'Random_Forest':random_forest_pred,
+        #                     'XGBoost':xgboost_pred,
+        #                     'Clustering':clustering_pred})
+        # m = self.stacker #using xgboost alone bc git LFS has issues when deployment with streamlit
+        # return m.predict(pred_input)
+        return self.xgboost.predict(pred_input)
+        
 
     def training_predict(self,pred_input):
         return self.model.predict(pred_input)
